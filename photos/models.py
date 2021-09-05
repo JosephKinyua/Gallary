@@ -28,4 +28,16 @@ class Image(models.Model):
     date_upload = models.DateTimeField(auto_now_add=True)
 
 
+    def save_image(self):
+        self.save()
+
+    @classmethod
+    def delete_image(cls, id):
+        cls.objects.filter(id=id).delete()
+
+    @classmethod
+    def update_image(cls, id, imagechange):
+        cls.objects.filter(id = id).update(image = imagechange)
+
+
 
