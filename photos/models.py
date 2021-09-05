@@ -11,3 +11,11 @@ class Location(models.Model):
     @classmethod
     def deleteLocation(cls, id):
         cls.objects.filter(id=id).delete()
+
+    
+    @classmethod
+    def updateLocation(cls, id, locaUpdate):
+        cls.objects.filter(id=id).update(location=locaUpdate)
+
+    def __str__(self):
+        return self.location
