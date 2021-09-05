@@ -65,6 +65,22 @@ class Image(models.Model):
         except Image.DoesNotExist:
             print('Image does not exist')
 
+    @classmethod
+    def search_image(cls, category):
+        image_search = cls.objects.filter(category_id__category__icontains=category)
+        return image_search
+
+    @classmethod
+    def filter_by_location(cls, location):
+        image_location_search = cls.objects.filter(location_id__location__icontains=location)
+        return image_location_search
+
+    class Meta:
+        ordering = ['date_upload']
+    
+    def __str__(self):
+        return self.image_name
+
 
 
 
