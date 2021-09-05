@@ -39,5 +39,8 @@ class Image(models.Model):
     def update_image(cls, id, imagechange):
         cls.objects.filter(id = id).update(image = imagechange)
 
+class Category(models.Model):
+      category = models.CharField(max_length=200)
+
 
 
