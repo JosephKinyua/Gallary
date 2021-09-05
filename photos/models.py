@@ -19,6 +19,24 @@ class Location(models.Model):
 
     def __str__(self):
         return self.location
+
+
+class Category(models.Model):
+    category = models.CharField(max_length=200)
+
+    def saveCategory(self):
+        self.save()
+
+    @classmethod
+    def deleteCategory(cls, id):
+        cls.objects.filter(id=id).delete()
+
+    @classmethod
+    def updateCategory(cls, id, cateUpdate):
+        cls.objects.filter(id=id).update(category=cateUpdate)
+
+    def __str__(self):
+        return self.category
 class Image(models.Model):
     image = models.ImageField(upload_to='photos')
     image_name =  models.CharField(max_length=200)
@@ -39,8 +57,6 @@ class Image(models.Model):
     def update_image(cls, id, imagechange):
         cls.objects.filter(id = id).update(image = imagechange)
 
-class Category(models.Model):
-      category = models.CharField(max_length=200)
 
 
 
