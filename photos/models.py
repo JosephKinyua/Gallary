@@ -20,5 +20,12 @@ class Location(models.Model):
     def __str__(self):
         return self.location
 class Image(models.Model):
+    image = models.ImageField(upload_to='photos')
+    image_name =  models.CharField(max_length=200)
+    image_desc = models.TextField()
+    location_id = models.ForeignKey(Location, on_delete=models.CASCADE, default=None)
+    category_id = models.ForeignKey(Category, on_delete=models.CASCADE, default=None)
+    date_upload = models.DateTimeField(auto_now_add=True)
+
 
 
