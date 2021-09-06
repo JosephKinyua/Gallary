@@ -1,5 +1,5 @@
 h1 {
-    color:  rgb(240, 206, 57, 0.9);
+    color: rgb(240, 206, 57, 0.9);
 }
 
 .searchform {
@@ -7,14 +7,13 @@ h1 {
 }
 
 .searchform .search {
-    width: 40%;
+    width: 100%;
     position: relative;
     display: flex;
-    left: 40%;
 }
 
 .searchform .searchTerm {
-    width: 40%;
+    width: 100%;
     border: 1px solid black;
     border-right: none;
     padding: 24px;
@@ -67,6 +66,7 @@ button:focus {
     background-color: rgb(240, 206, 57, 0.4);
     width: 15%;
     padding: 20px;
+    margin-left: 20px;
     border-radius: 18px;
     -webkit-border-radius: 18px;
     -moz-border-radius: 18px;
@@ -88,3 +88,35 @@ button:focus {
 .dropdown-menu a {
     margin: 5px;
 }
+
+.wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1rem));
+    justify-content: center;
+}
+
+.photo {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.landingimage {
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 7px 6px #eeb313;
+    margin: 5px;
+}
+
+
+.hanger {
+    background-color: white;
+    min-width: 80px;
+    padding: 10px;
+    margin-top: -18px;
+    border-radius: 20px;
+    border-bottom: 2px solid;
+    box-shadow: 0px 2px 4px black;
+} 

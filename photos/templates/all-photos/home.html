@@ -11,12 +11,12 @@
 </div>
 
 <div class="dropdown">
-    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+    <button type="button" class="btn btn-success dropdown-toggle m-3" data-toggle="dropdown">
     FILTER BY LOCATION
   </button>
     <div class="dropdown-menu">
         {% for location in all_location %}
-        <a class="dropdown-item btn btn-primary m-3"  href=" /?location={{location.location}} ">{{location.location}}</a>
+        <a class="dropdown-item btn btn-primary m-3" href=" /?location={{location.location}} ">{{location.location}}</a>
         <div class="dropdown-divider "></div>
         {% endfor %}
     </div>
@@ -24,19 +24,19 @@
 
 <hr>
 
-<div class="landing ">
+<div class="landing">
     <h1 class="text-center mt-5 mb-5 ">Photo Gallery</h1>
 </div>
 
-<div class="wrapper-grid justify-content-center align-items-center text-center ">
+<div class="wrapper-grid justify-content-center align-items-center text-center">
     {% for photo in all_photos %}
-    <div class="photo " data-target="#modal{{photo.id}} ">
-        <img src="{{ photo.image.url }} " alt="{{ photo.image_name }} " class='img-fluid landingimg'>
+    <div class="photo" data-target="#modal{{photo.id}} ">
+        <img src="{{ photo.image.url }} " alt="{{ photo.image_name }} " class='img-fluid landingimage'>
         <div class="d-flex justify-content-center align-items-center ">
             <p class='text-center hanger'>{{photo.image_name}}</p>
         </div>
     </div>
-    <div class="modal " id="modal{{photo.id}} ">
+    <div class="modal" id="modal{{photo.id}} ">
         <div class="d-flex justify-content-between align-items-center p-1 toptitle ">
             <h2 class='text-center'>{{photo.image_name}}</h2>
             <button class="btn close-modal ">&times;</button>

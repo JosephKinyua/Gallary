@@ -17,7 +17,7 @@
 <div class="wrapper-grid justify-content-center align-items-center text-center">
     {% if all_photos %} {% for photo in all_photos %}
     <div class="photo" data-target="#modal{{photo.id}}">
-        <img src="{{ photo.image.url }}" alt="{{ photo.image_name }}" class='img-fluid landingimg'>
+        <img src="{{ photo.image.url }}" alt="{{ photo.image_name }}" class='img-fluid landingimage'>
         <div class="d-flex justify-content-center align-items-center">
             <p class='text-center hanger'>{{photo.image_name}}</p>
         </div>
