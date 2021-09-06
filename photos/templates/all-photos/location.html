@@ -2,7 +2,7 @@
 <div class="cate1">
     <ul class='cate text-md-center'>
         <span>Categories:</span> {% if all_category %} {% for cate in all_category %}
-        <li><a href="/search/?search={{ cate.category }}">{{ cate.category }}</a></li>
+        <li><a class="btn btn-primary" href="/search/?search={{ cate.category }}">{{ cate.category }}</a></li>
         {% endfor %} {% else %}
         <p>Categories not available at the Moments</p>
         {% endif %}
@@ -11,7 +11,7 @@
 
 <hr>
 <div class="landing">
-    <h1 class="text-center mt-5 mb-5">Photos taken on <span class='bg-info pr-2 pl-2 text-white'>{{locationn}}</span></h1>
+    <h1 class="text-center mt-5 mb-5">Photos taken in <span class='bg-info pr-2 pl-2 text-white'>{{locationn}}</span></h1>
 </div>
 
 <div class="wrapper-grid justify-content-center align-items-center text-center">

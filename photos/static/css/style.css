@@ -1,5 +1,5 @@
 h1 {
-    color: green
+    color:  rgb(240, 206, 57, 0.9);
 }
 
 .searchform {
@@ -83,4 +83,8 @@ button:focus {
 .custnav {
     background-color: rgb(240, 206, 57, 0.4);
     padding: 30px;
+}
+
+.dropdown-menu a {
+    margin: 5px;
 }
