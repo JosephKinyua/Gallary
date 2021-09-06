@@ -51,3 +51,36 @@ button:focus {
     color: #000;
     border: none;
 }
+
+.cate a:link {
+    text-decoration: none;
+    color: rgb(86, 52, 179);
+    background-color: rgb(240, 206, 57);
+    margin-top: 10px;
+}
+
+.cate li {
+    list-style: none;
+}
+
+.cate1 {
+    background-color: rgb(240, 206, 57, 0.4);
+    width: 15%;
+    padding: 20px;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
+.custnav li {
+    list-style: none;
+    position: absolute;
+    left: 80%;
+}
+
+.custnav {
+    background-color: rgb(240, 206, 57, 0.4);
+    padding: 30px;
+}
