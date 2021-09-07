@@ -4,7 +4,7 @@
         <span>Categories:</span> {% if all_category %} {% for cate in all_category %}
         <li><a class="btn btn-primary" href="/search/?search={{ cate.category }}">{{ cate.category }}</a></li>
         {% endfor %} {% else %}
-        <p>Categories not available at the Moment</p>
+        <p>Categories not available at the Moments</p>
         {% endif %}
     </ul>
 </div>
