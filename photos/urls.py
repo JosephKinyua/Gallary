@@ -12,7 +12,8 @@ from . import views
 urlpatterns=[
     path('', views.home,name='home'),
     path('search/', views.search_photo_category, name='search_results'), 
-    path('location/', views.location, name='locate')
+    path('location/', views.location, name='locate'),
+   
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
